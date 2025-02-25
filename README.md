@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website! This project showcases my skills, experience, and projects as a MERN stack web developer.
 
 ## 📌 Live Demo
-[Click here to view the live site](#) 
+[Click here to view the live site](https://aditya8317.github.io/Portfolio/) 
 
 ## 🚀 Features
 - Responsive design

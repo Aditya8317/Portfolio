@@ -1749,29 +1749,48 @@
   .blog-link:hover {
     background-color: #0056b3;
   }
-  .download-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 14px 24px; 
-    font-size: 18px; 
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
-    border-radius: 8px;
-    text-decoration: none;
-    
+  /* Resume Download Container */
+.resume-download-container {
+    background: var(--bg-gradient-jet); /* Use your gradient or solid color */
+    border: 1px solid var(--jet); /* Use your theme's border color */
+    border-radius: 20px; /* Rounded corners */
+    padding: 30px;
+    margin: 40px 0; /* Add some spacing around the container */
+    box-shadow: var(--shadow-2); /* Add a subtle shadow */
+    text-align: center; /* Center-align content */
   }
+  
+  .resume-download-content {
+    max-width: 600px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the content */
+  }
+  
+  .resume-download-title {
+    font-size: 24px;
+    color: var(--white-2); /* Use your theme's text color */
+    margin-bottom: 15px;
+  }
+  
+  .resume-download-text {
+    font-size: 16px;
+    color: var(--light-gray); /* Use your theme's secondary text color */
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  
+  /* Download Button */
   .download-btn {
     display: inline-flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    background-color: #007bff;
+    background-color: #007bff; /* Primary button color */
     border-radius: 8px;
     text-decoration: none;
-    transition: background 0.3s ease-in-out, transform 0.2s;
+    transition: background 0.3s ease-in-out, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .download-btn ion-icon {
@@ -1780,13 +1799,25 @@
   }
   
   .download-btn:hover {
-    background-color: #0056b3; 
+    background-color: #0056b3; /* Darker shade on hover */
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
   
   .download-btn:active {
     transform: scale(0.95);
   }
-  .resume-download {
-    margin-bottom: 40px; 
+  
+  /* Download Confirmation Message */
+  .download-confirmation {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #28a745; /* Success color */
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .download-confirmation.show {
+    opacity: 1;
   }

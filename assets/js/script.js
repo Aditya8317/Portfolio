@@ -52,3 +52,36 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
+// resume button
+document.getElementById('downloadResumeBtn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+  
+    // Path to your resume file
+    const fileUrl = './assets/adityaResume.pdf';
+  
+    // Desired filename for the downloaded file
+    const fileName = 'Aditya_Bhosale_Resume.pdf';
+  
+    // Create a temporary anchor element
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = fileName;
+  
+    // Trigger the download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  
+    // Show download confirmation message
+    const confirmation = document.getElementById('downloadConfirmation');
+    confirmation.style.display = 'block';
+    confirmation.classList.add('show');
+  
+    // Hide the confirmation message after 3 seconds
+    setTimeout(function() {
+      confirmation.classList.remove('show');
+      setTimeout(function() {
+        confirmation.style.display = 'none';
+      }, 300); // Wait for the fade-out transition to complete
+    }, 3000);
+  });
